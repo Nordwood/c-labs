@@ -18,8 +18,7 @@ int addchek(unsigned long int n){
 while(n/10 != 0){
     n = addition(n);
     cnt ++;
-    printf("%d\n", n);
-    printf("%d\n", cnt);
+
 }
 return cnt;
 }
