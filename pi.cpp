@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include <time.h>
 
+
 // возвращает случайное число от -1 до 1
 double random(){
     int a = rand()%2001;
@@ -11,7 +12,7 @@ double random(){
 
 // возврашает факт того: попала ли точка внутрь круга?
 bool is_in_circle(double x, double y){
-    
+
     double r = x*x + y*y;
 
     if (r <= 1) {
@@ -28,7 +29,7 @@ bool is_in_circle(double x, double y){
 */
 double calculate_pi(int n){
     int acc = 0;
-    
+
     for(int i = 1; i <= n; i++){
         double x = random();
         double y = random();
@@ -46,13 +47,26 @@ double calculate_pi(int n){
 
 
 
+void test_calculate_pi(){
+if (calculate_pi(1) == 0.00000){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+if (calculate_pi(4) == 4.0000){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
 
+}
 
 int main()
 {
+    test_calculate_pi();
     srand(time(0));
     int n = 100000;
-    scanf("%d", &a);
+    scanf("%d", &n);
     double lp = calculate_pi(n);
     printf("%f", lp);
     return 0;
