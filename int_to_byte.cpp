@@ -1,13 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
-    int b;
-    scanf("%d", &b);
+void byte(int n){
     int c;
     int k;
-    int s = b;
+    int s = n;
 
     while (s>0){
 
@@ -17,5 +14,12 @@ int main()
     s = s/2;
 
     }
+}
+int main()
+{
+    test_byte();
+    int b;
+    scanf("%d", &b);
+    byte(b);
     return 0;
 }
