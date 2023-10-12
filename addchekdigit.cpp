@@ -1,5 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+void test_addchek(){
+if (addchek(0) == 0){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+if (addchek(5) == 0){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+
+if (addchek(5678) == 2){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+}
 int addition(unsigned long int n){
 int sum = 0;
 
@@ -9,7 +27,7 @@ while(n != 0){
 
 
 }
-printf("%d\n", sum);
+
 return sum;
 }
 
@@ -25,6 +43,7 @@ return cnt;
 
 int main()
 {
+test_addchek();
     printf("input number for addition check\n");
   unsigned long int n;
   scanf("%d", &n);
