@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-// не работает???
+
 
 
 
@@ -20,6 +20,6 @@ int main()
     scanf("%255s",str);
     printf("output: %s",str);
     int s = len_cstr(str, 255);
-    printf("\n%d", s);
+    printf("\n len is %d", s);
     return 0;
 }
