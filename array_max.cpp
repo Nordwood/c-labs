@@ -1,7 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-// не знаю, что тут тестировать
+void test_arrmax(){
+int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+int c[10] = {0, 1, 2, 3, 4, 5, 6, 7, 10, 12};
+
+if (max_array(a, 10)(a, 10) == 9){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+if (max_array(s, 10)(a, 10) == 12){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+}
 int random_array(int *x, int b){
     int s;
     for (int i = 0; i<b; i++){
@@ -33,6 +47,7 @@ int i;
 int main()
 {
     srand(time(0));
+    test_arrmax();
     int a[10];
     int arr = random_array(a, 10);
     show_array(arr, 10);
