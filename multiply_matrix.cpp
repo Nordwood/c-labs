@@ -3,6 +3,19 @@
 #include <stdlib.h>
 #include <time.h>
 
+void test_multi(){
+int a[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int s[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 11 };
+int **a = (int*)malloc(n*n * sizeof(int));
+int **s = multiply_matrx(matrx1, matrx2, a, n)
+k[3][3] = {30, 36, 48, 66, 81, 108, 102, 126, 168};   
+if (s == k){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+}
+
 int multiply_matrx(int **a , int **b, int **c, int n){
 
 
