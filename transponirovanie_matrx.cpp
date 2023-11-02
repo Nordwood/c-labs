@@ -3,6 +3,16 @@
 #include <stdlib.h>
 #include <time.h>
 
+void test_trans(){
+int a[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int s[3][3] = { 1, 4, 7, 2, 5, 8, 3, 6, 9 };
+if (transpon(a, 10) == s){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+
+}
 
 int random_create(int **a , int n){
   int i, j;
@@ -49,6 +59,7 @@ int main()
  int i, j, n;
 
   srand(time(0));
+  test_trans();
   printf("Enter n matrix ");
   scanf("%d", &n);
   int **a = (int*)malloc(n*n * sizeof(int));
