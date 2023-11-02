@@ -3,6 +3,20 @@
 #include <stdlib.h>
 #include <time.h>
 // не работает я устал исправлять и искать ошибки
+void test_determ(){
+int a[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int s[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 11 };
+if (determ_matrx(a, 9) == 0){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+if (determ_matrx(s, 10) == -6){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+}
 int determ_matrx(int **a ,int n){
 int **mn = random_create(a, n);
 int **r = random_create(a, n);
@@ -63,6 +77,7 @@ int main()
  int i, j, n;
 
   srand(time(0));
+  void test_determ();
   printf("Enter n matrix \n");
   scanf("%d", &n);
   int **a = (int*)malloc(n*n * sizeof(int));
@@ -71,7 +86,7 @@ int main()
   printf("Matrix a\n");
   show_matrx(matrx1, n);
 
-  int **s = determ_matrx(a, n)
+  int **s = determ_matrx(a, n);
   printf("determinant:\n");
   show_matrx(s, n);
   free(matrx1);
