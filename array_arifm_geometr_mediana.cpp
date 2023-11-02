@@ -2,7 +2,27 @@
 #include <stdlib.h>
 #include <time.h>
 #include<math.h>
-// не знаю, что тут тестировать
+
+void test_addchek(){
+int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+if (arifmetic_sr_array(a, 10) == 4.5){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+if (geometric_sr_array(a, 10) == 1.4632591596632237867670171093418){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+int s = bubbleSort(a, 10);
+    
+if (median(medarr, 10) == 4.5){
+    printf("ok\n");}
+    else{
+        printf("test failed\n");
+            }
+}
 int random_array(int *x, int b){
     int s;
     for (int i = 0; i<b; i++){
