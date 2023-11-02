@@ -3,7 +3,7 @@
 #include <time.h>
 #include<math.h>
 
-void test_addchek(){
+void test_array(){
 int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 if (arifmetic_sr_array(a, 10) == 4.5){
     printf("ok\n");}
@@ -100,6 +100,7 @@ double median(int *x, int b){
 int main()
 {
     srand(time(0));
+    test_array();
     int a[10];
     int arr = random_array(a, 10);
     show_array(arr, 10);
