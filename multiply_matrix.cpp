@@ -16,18 +16,15 @@ if (s == k){
             }
 }
 
-int multiply_matrx(int **a , int **b, int **c, int n){
-
-
-for(int i = 0; i < n; i++){
-    for(int j = 0; j < n; j++)
-    {
-
-        c[i] = (int*)malloc((i + 1) * sizeof(int));
-        for(int k = 0; k < n; k++){
-        c[i][j] += a[i][k] * b[k][j];}}
+void matrix_multiplication(int **a, int **b, int **result, int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            result[i][j] = 0;
+            for (int k = 0; k < n; k++) {
+                result[i][j] += a[i][k] * b[k][j];
+            }
+        }
     }
-return c;
 }
 
 int random_create(int **a , int n){
@@ -71,12 +68,21 @@ int main()
   show_matrx(matrx1, n);
   printf("Matrix b\n");
   show_matrx(matrx2, n);
-  int **s = multiply_matrx(matrx1, matrx2, a, n);
+  int** result = (int**)malloc(n * sizeof(int*));
+  for (int i = 0; i < n; i++) {
+    result[i] = (int*)malloc(n * sizeof(int));}
+  matrix_multiplication(matrx1, matrx2, result, n);
   printf("multiply:\n");
-  show_matrx(a, n);
-  free(matrx1);
-  free(matrx2);
-  free(s);
+  show_matrx(result, n);
+   for (int i = 0; i < n; i++) {
+        free(matrx1[i]);}
+    free(matrx1);
+    for (int i = 0; i < n; i++) {
+        free(matrx2[i]);}
+    free(matrx2);
+    for (int i = 0; i < n; i++) {
+        free(result[i]);}
+    free(result);
 
 
   return 0;
