@@ -6,9 +6,9 @@
 void test_multi(){
 int a[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 int s[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 11 };
-int **a = (int*)malloc(n*n * sizeof(int));
-int **s = multiply_matrx(matrx1, matrx2, a, n)
-k[3][3] = {30, 36, 48, 66, 81, 108, 102, 126, 168};   
+//int **a = (int*)malloc(n*n * sizeof(int));
+//int **s = multiply_matrx(matrx1, matrx2, a, n)
+int k[3][3] = {30, 36, 48, 66, 81, 108, 102, 126, 168};
 if (s == k){
     printf("ok\n");}
     else{
@@ -23,7 +23,7 @@ for(int i = 0; i < n; i++){
     for(int j = 0; j < n; j++)
     {
 
-        c[i] = (int*) malloc((i + 1) * sizeof(int));
+        c[i] = (int*)malloc((i + 1) * sizeof(int));
         for(int k = 0; k < n; k++){
         c[i][j] += a[i][k] * b[k][j];}}
     }
@@ -73,7 +73,7 @@ int main()
   show_matrx(matrx2, n);
   int **s = multiply_matrx(matrx1, matrx2, a, n);
   printf("multiply:\n");
-  show_matrx(s, n);
+  show_matrx(a, n);
   free(matrx1);
   free(matrx2);
   free(s);
