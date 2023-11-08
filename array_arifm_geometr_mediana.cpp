@@ -16,8 +16,8 @@ if (geometric_sr_array(a, 10) == 1.4632591596632237867670171093418){
         printf("test failed\n");
             }
 int s = bubbleSort(a, 10);
-    
-if (median(medarr, 10) == 4.5){
+
+if (median(s, 10) == 4.5){
     printf("ok\n");}
     else{
         printf("test failed\n");
@@ -37,7 +37,7 @@ void show_array(int *x, int b){
     printf("%d ", x[i]);}
 }
 
-double arifmetic_sr_array(int *x, int b){
+int arifmetic_sr_array(int *x, int b){
     int i;
   double sum = 0;
   double arf_sr = 0;
@@ -50,7 +50,7 @@ double arifmetic_sr_array(int *x, int b){
   return arf_sr;
 }
 
-double geometric_sr_array(int *x, int b){
+int geometric_sr_array(int *x, int b){
     int i;
   double sum = 0;
   double geo_sr = 0;
@@ -81,7 +81,7 @@ int bubbleSort(int *x, int b)
   return x;
 }
 
-double median(int *x, int b){
+int median(int *x, int b){
     int i;
     int index;
     float med;
