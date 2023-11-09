@@ -2,16 +2,15 @@
 #include <malloc.h>
 #include <stdlib.h>
 #include <time.h>
-// не работает я устал исправлять и искать ошибки
-/*void test_determ(){
+void test_determ(){
 int a[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 int s[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 11 };
-if (determ_matrx(a, 9) == 0){
+if (calculateDeterm(a, 9) == 0){
     printf("ok\n");}
     else{
         printf("test failed\n");
             }
-if (determ_matrx(s, 10) == -6){
+if calculateDeterm((s, 10) == -6){
     printf("ok\n");}
     else{
         printf("test failed\n");
@@ -74,11 +73,11 @@ void show_matrx(int **a, int n){
 
 int main()
 {
-
+    
   int n, i, j, deter;
 
   srand(time(0));
-  //void test_determ();
+  test_determ();
   printf("Enter n matrix \n");
   scanf("%d", &n);
   int **a = (int*)malloc(n*n * sizeof(int));
