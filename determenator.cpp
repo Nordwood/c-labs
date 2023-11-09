@@ -10,12 +10,12 @@ if (calculateDeterm(a, 9) == 0){
     else{
         printf("test failed\n");
             }
-if calculateDeterm((s, 10) == -6){
+if (calculateDeterm(s, 10) == -6){
     printf("ok\n");}
     else{
         printf("test failed\n");
             }
-}*/
+}
 int calculateDeterm(int **matrix, int size){
 int det = 0;
 if (size == 2)
@@ -73,7 +73,7 @@ void show_matrx(int **a, int n){
 
 int main()
 {
-    
+
   int n, i, j, deter;
 
   srand(time(0));
