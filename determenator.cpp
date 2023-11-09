@@ -77,7 +77,7 @@ int main()
   int n, i, j, deter;
 
   srand(time(0));
-  test_determ();
+  //test_determ();
   printf("Enter n matrix \n");
   scanf("%d", &n);
   int **a = (int*)malloc(n*n * sizeof(int));
