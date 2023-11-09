@@ -69,8 +69,12 @@ int main()
   printf("\n");
   show_matrx(s, n);
 
-
-  free(matrx);
-  free(s);
+ for (i = 0; i < n; i++){
+    free(matrx[i]);
+ }free(matrx);
+for (i = 0; i < n; i++){
+    free(s[i]);
+}free(s);
+  
   return 0;
 }
