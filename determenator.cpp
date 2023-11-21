@@ -5,12 +5,12 @@
 void test_determ(){
 int a[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 int s[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 11 };
-if (calculateDeterm(a, 9) == 0){
+if (calculateDeterm(**a, 9) == 0){
     printf("ok\n");}
     else{
         printf("test failed\n");
             }
-if (calculateDeterm(s, 10) == -6){
+if (calculateDeterm(**s, 10) == -6){
     printf("ok\n");}
     else{
         printf("test failed\n");
@@ -18,6 +18,9 @@ if (calculateDeterm(s, 10) == -6){
 }
 int calculateDeterm(int **matrix, int size){
 int det = 0;
+if (size == 1){
+    return matrix[0][0];
+}
 if (size == 2)
  {return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];}
 int **tempMat;
