@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1700696856 source:c:\users\Артур\documents\cprojexts\matrxdeterm\main.c
+	<time.h>
+	"lib.h"
+
+1700696132 c:\users\Артур\documents\cprojexts\matrxdeterm\lib.h
+	"lib.cpp"
+
+1700696887 c:\users\Артур\documents\cprojexts\matrxdeterm\lib.cpp
+	<stdio.h>
+	<stdlib.h>
+
+1700696780 source:c:\users\Артур\documents\cprojexts\matrxdeterm\lib.cpp
+	<stdio.h>
+	<stdlib.h>
+
