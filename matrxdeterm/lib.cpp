@@ -44,16 +44,44 @@ void test_determ() {
 
 
   int b[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+  int i, j;
+  int** bmatrx = (int**)malloc(3 * sizeof(int*));
+  for (i = 0; i < 3; i++) {
+    bmatrx[i] = (int*)malloc((3 + 1) * sizeof(int));
+    for (j = 0; j < 3; j++) {
+      bmatrx[i][j] = b[i][j];
+    }
+  }
   int s[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 11}};
+    int** smatrx = (int**)malloc(3 * sizeof(int*));
+  for (i = 0; i < 3; i++) {
+    smatrx[i] = (int*)malloc((3 + 1) * sizeof(int));
+    for (j = 0; j < 3; j++) {
+      smatrx[i][j] = s[i][j];
+    }
+  }
+
+  int l[1][1] = {{2}};
+   int** lmatrx = (int**)malloc(1 * sizeof(int*));
+  for (i = 0; i < 1; i++) {
+    lmatrx[i] = (int*)malloc((1 + 1) * sizeof(int));
+    for (j = 0; j < 1; j++) {
+      lmatrx[i][j] = l[i][j];
+    }
+  }
 
 
-
-  if (calculateDeterm((int**)b, 3) == 0) {
+  if (calculateDeterm(bmatrx, 3) == 0) {
     printf("ok\n");
   } else {
     printf("test failed\n");
   }
-  if (calculateDeterm((int**)s, 3) == -6) {
+  if (calculateDeterm(smatrx, 3) == -6) {
+    printf("ok\n");
+  } else {
+    printf("test failed\n");
+  }
+   if (calculateDeterm(lmatrx, 1) == 2) {
     printf("ok\n");
   } else {
     printf("test failed\n");
