@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1700798611 source:c:\users\admin\desktop\פע31\detmatrix\lib.cpp
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1700796077 source:c:\users\admin\desktop\פע31\detmatrix\main.c
+	<time.h>
+	"lib.h"
+
+1700798611 c:\users\admin\desktop\פע31\detmatrix\lib.h
+
+1700796969 c:\users\admin\desktop\פע31\detmatrix\lib.cpp
+	<stdio.h>
+	<stdlib.h>
+
+1700796077 source:c:\users\admin\desktop\פע31\detmatrix\main.cpp
+	<time.h>
+	"lib.h"
+
+1700800037 source:c:\users\admin\desktop\ft-31\detmatrix\lib.cpp
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1700800080 c:\users\admin\desktop\ft-31\detmatrix\lib.h
+
